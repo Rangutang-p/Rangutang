@@ -1,0 +1,45 @@
+/* style sheet for whole of website*/
+
+/*building/sizing grid */
+.wrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap:1em;
+    grid-auto-rows: minmax(10px, auto);
+}
+
+/* making a grid for menu (subheading) */
+.sub_heading {
+  grid-column: 1/5;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+}
+
+/* establishing different colors for every other div */
+.wrapper > div {
+  background: #eee;
+}
+
+/* formatting the heading */
+.heading {
+  grid-column: 1/5;
+}
+
+/* formatting the subheading menu */
+.sub_heading > div {
+  background: orange;
+  text-align: center;
+  border: 2px;
+}
+
+/*formatting content spaces */
+.content1 {
+  grid-column: 1/4;
+
+}
+
+h1 {
+  color:red;
+  text-align: center;
+  font-size: 22pt;
+}
