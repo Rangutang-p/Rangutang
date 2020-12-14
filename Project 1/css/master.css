@@ -1,0 +1,155 @@
+/* color scheme variables */
+:root {
+  --primary: orange;
+  --dark: #444;
+  --light: white;
+  --shadow: 0px 1px 5px rgba(86, 104, 104, 0.8);
+}
+
+/* general formatting */
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+body {
+  background: #ccc;
+  margin: 0px 0px;
+  line-height: 1.9rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border: 0;
+  border-radius: 16px;
+  color: var(--light);
+  background: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  color: var(--light);
+  background: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+video {
+  max-width: 100%;
+  align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* formatting icons */
+
+.fa-bars {
+  padding: 0;
+}
+
+/* Navigation formatting */
+
+.main-nav {
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.4rem 20px;
+  float: right;
+  text-decoration: none;
+  color: var(--dark);
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 10pt;
+}
+
+.main-nav a:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* hiding collapsible icon for large screens */
+
+.main-nav .icon {
+  display: none;
+}
+
+
+/* footer */
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  background: #444;
+  text-align: center;
+  }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  color: white;
+  background: #3B5998;
+}
+
+.fa-youtube {
+  color: white;
+  background: #FF0000;
+}
+#facebook {
+  grid-column: 2/3;
+}
+
+#youtube {
+  grid-column: 3/4;
+}
+
+@media(max-width: 600px) {
+
+/* collapsing main nav sections for small screens */
+  .main-nav a:not(:first-child) {
+      display: none;
+  }
+
+/* displaying the bars icon signifying a collapsable menu */
+.main-nav .icon {
+  display: block;
+  height: 30px;
+  overflow:hidden;
+}
+
+.main-nav.responsive {
+  position: relative;
+}
+
+/* mechanism to allow expansion of menu using JS */
+.main-nav.responsive a {
+  display: block;
+  float: none;
+  text-align: left;
+}
+
+.main-nav.responsive a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+}

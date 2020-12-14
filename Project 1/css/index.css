@@ -1,0 +1,136 @@
+/* top container formatting */
+.top-container {
+  display:grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "a a"
+  "box-1 box-2"
+}
+
+.showcase {
+  min-height: 500px;
+  padding: 3rem;
+  animation: backgroundchange 24s infinite;
+  background-position: center;
+  background-size: cover;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  text-shadow: 1px 1px 3px #444;
+  grid-area: a;
+}
+
+
+.showcase h1 {
+  text-shadow: var(--shadow);
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.showcase p {
+  text-shadow: var(--shadow);
+  margin-top: 30px;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+/* boxes formatting */
+.box {
+  height: auto;
+  align-items: center;
+  color: var(--dark);
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  padding:2rem;
+  padding-left: 4rem;
+  box-shadow: var(--shadow);
+}
+
+.box p {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.box-1 {
+  grid-area: box-1;
+  margin-left: 20px;
+}
+
+.box-2 {
+  grid-area: box-2;
+  margin-right: 20px;
+}
+
+/* video section */
+.int-video {
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--light);
+  margin: 20px;
+}
+
+/* testimonials formatting */
+.testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial h1 {
+  text-align: center;
+}
+
+.testimonial img {
+  max-width: 40%;
+}
+
+.test {
+  display: block;
+  padding: 20px;
+  margin: 10px 20px;
+  background: var(--light);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.test p {
+  text-align: center;
+}
+
+/* Animations */
+
+@keyframes backgroundchange {
+  0%,100% {background-image: url(../img/random.jpg);}
+  33% {background-image: url(../img/Diatone.png);}
+  67% {background-image: url(../img/dportrait.jpg);}
+}
+
+/* media queries */
+@media(max-width: 600px) {
+  /* fixing the nav bar */
+  .top-container {
+    grid-template-areas:
+    'a'
+    'box-1'
+    'box-2'
+  }
+
+  /* changing min-height of showcase */
+  .showcase {
+    min-height: 400px;
+  }
+
+  /* fixing boxes */
+  .box {
+    margin: 10px 20px;
+  }
+
+  /* reducing text sizes */
+  .showcase p {
+    font-size: 2.5rem;
+  }
+
+}
