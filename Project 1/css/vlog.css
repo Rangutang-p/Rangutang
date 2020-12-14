@@ -1,0 +1,16 @@
+/* formatting the explanation blurb */
+
+.explanation {
+  margin: 20px;
+  background-color: var(--light);
+  padding: 20px;
+  box-shadow: var(--shadow);
+
+}
+
+.video {
+  margin: 20px;
+  background-color: var(--light);
+  padding:20px;
+  box-shadow: var(--shadow);
+}

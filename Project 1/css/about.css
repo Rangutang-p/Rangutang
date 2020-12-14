@@ -1,0 +1,43 @@
+.purpose {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--light);
+  box-shadow: var(--shadow);
+}
+
+.content-a {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--light);
+  box-shadow: var(--shadow);
+}
+
+/* bios formatting */
+
+.member {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--light);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-areas:
+  'text portrait'
+}
+
+.text {
+  grid-area: text;
+}
+
+.portrait {
+  grid-area: portrait;
+}
+
+/* media queries */
+@media(max-width: 600px) {
+
+  .member {
+    grid-template-areas:
+    'portrait'
+    'text'
+  }
+}
