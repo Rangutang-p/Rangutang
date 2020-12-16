@@ -1,0 +1,47 @@
+
+
+/* formatting course explanation */
+
+.course {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--light);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-areas:
+  'text portrait'
+}
+
+/* text side of Course */
+
+.text {
+  grid-area: text;
+}
+
+/* portrait side: reserved for images of drones/equipment will be using */
+
+.portrait {
+  grid-area: portrait;
+}
+
+
+/* more section */
+
+.more {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--light);
+  box-shadow: var(--shadow);
+}
+
+
+
+/* media queries */
+@media(max-width: 600px) {
+
+  .course {
+    grid-template-areas:
+    'portrait'
+    'text'
+  }
+}

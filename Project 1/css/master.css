@@ -81,7 +81,6 @@ video {
   display: none;
 }
 
-
 /* footer */
 
 footer {
@@ -121,6 +120,7 @@ footer {
   grid-column: 3/4;
 }
 
+/* media queries */
 @media(max-width: 600px) {
 
 /* collapsing main nav sections for small screens */
@@ -151,5 +151,11 @@ footer {
   right: 0;
   top: 0;
 }
+
+}
+
+/* animations */
+
+@keyframes menuicon {
 
 }
