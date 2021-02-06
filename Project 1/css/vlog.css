@@ -5,7 +5,11 @@
   background-color: var(--light);
   padding: 20px;
   box-shadow: var(--shadow);
+}
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .video {
@@ -13,4 +17,14 @@
   background-color: var(--light);
   padding:20px;
   box-shadow: var(--shadow);
+}
+
+
+@media(max-width: 600px) {
+
+  .container {
+    display: grid;
+    grid-template-columns: none;
+  }
+
 }

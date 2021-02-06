@@ -18,6 +18,7 @@ body {
   background: #ccc;
   margin: 0px 0px;
   line-height: 1.9rem;
+  overflow-x: hidden;
 }
 
 .btn {
@@ -46,28 +47,51 @@ video {
   margin: 0 auto;
 }
 
-/* formatting icons */
+/* header formatting */
 
-.fa-bars {
-  padding: 0;
+header {
+  padding-top: 7px;
+  padding-bottom: 10px;
+  box-shadow: var(--shadow);
+  background-color: #ccc;
+  z-index: 1;
+}
+
+.logo {
+  float: left;
+  margin-left: 10px;
+}
+
+.logo-text {
+  float: left;
+  margin-left: 8px;
+}
+
+.logo-text h1 {
+  font-size: 20pt;
+}
+
+#orangutan {
+  height: 50px;
 }
 
 /* Navigation formatting */
 
 .main-nav {
-  box-shadow: var(--shadow);
   overflow: hidden;
+  margin-top: 11px;
 }
 
 .main-nav a {
-  display: block;
-  padding: 0.4rem 20px;
+  display: inline;
+  padding: 8px 30px;
   float: right;
+  margin:auto;
   text-decoration: none;
-  color: var(--dark);
+  color:black;
   text-transform: uppercase;
   text-align: left;
-  font-size: 10pt;
+  font-size: 1.2em;
 }
 
 .main-nav a:hover {
@@ -81,13 +105,39 @@ video {
   display: none;
 }
 
+<<<<<<< Updated upstream:Project 1/css/master.css
+=======
+/* Sticky header when you scroll */
+
+.sticky {
+  position: fixed;
+  top:0;
+  width: 100%;
+  padding-bottom: 0;
+  box-shadow: var(--shadow);
+}
+
+/* popup formatting */
+
+.popup {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+/* formatting icons */
+
+.fa-bars {
+  padding: 0;
+}
+>>>>>>> Stashed changes:Project 1/css/newmaster.css
 
 /* footer */
 
 footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 20px;
+  padding: 10px;
   background: #444;
   text-align: center;
   }
@@ -115,17 +165,53 @@ footer {
 }
 #facebook {
   grid-column: 2/3;
+  margin-left: auto;
 }
 
 #youtube {
   grid-column: 3/4;
+  margin-right: auto;
 }
 
+<<<<<<< Updated upstream:Project 1/css/master.css
+=======
+/* media queries */
+@media(max-width: 760px) {
+  /* header reformatting */
+  .main-nav a {
+    font-size: 1em;
+    padding: 6px 25px;
+  }
+
+  .logo-text h1 {
+    font-size: 18pt;
+  }
+
+  #orangutan {
+    height: 45px;
+  }
+}
+
+@media (max-width: 690px) {
+  /* header reformatting */
+  header {
+    padding-bottom: 11px;
+  }
+
+  .main-nav a {
+    font-size: 0.84em;
+    padding: 4px 25px;
+  }
+
+}
+
+>>>>>>> Stashed changes:Project 1/css/newmaster.css
 @media(max-width: 600px) {
 
 /* collapsing main nav sections for small screens */
   .main-nav a:not(:first-child) {
       display: none;
+      font-size: 10pt;
   }
 
 /* displaying the bars icon signifying a collapsable menu */
@@ -133,6 +219,7 @@ footer {
   display: block;
   height: 30px;
   overflow:hidden;
+  font-size: 10pt;
 }
 
 .main-nav.responsive {

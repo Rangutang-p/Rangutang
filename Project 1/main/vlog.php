@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Vlog</title>
-    <link rel="shortcut icon" href="icon.png">
-    <link rel="stylesheet" href="css/master.css">
-    <link rel="stylesheet" href="css/vlog.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <script type="text/javascript" src="js/myscript.js"></script>
+<?php include('../inc/top.php'); ?>
 
-    <!-- navigation tabs -->
-    <nav class="main-nav" id="myTopnav">
-        <a href="javascript:void(0);" class="icon" onclick="expandmenu()"><i class="fa fa-bars" style="padding:0"></i></a>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="vlog.html">Vlog</a>
-    </nav>
+  <title>Rangutang</title>
+
+  <!-- page-specific stylesheet; for general stylesheets see ../inc/style-links.php -->
+  <link rel="stylesheet" href="../css/vlog.css">
+
+</head>
+<body>
+<?php include '../inc/popup.php' ?>
+<?php include '../inc/header.php' ?>
 
     <!-- Explanation of page -->
     <div class="explanation">
@@ -29,23 +19,20 @@
 
     <!-- Video sections -->
     <div class="container">
-      <div class="video video-1">
+      <div class="video video-1" id='v1'>
         <h1>Heading of video</h1>
         <video src="intro.mp4" poster="img/random.jpg" controls>
           Your browser cannot play this video
         </video>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-  </div>
+      <div class="video video-1" id='v1'>
+        <h1>Heading of video</h1>
+        <video src="intro.mp4" poster="img/random.jpg" controls>
+          Your browser cannot play this video
+        </video>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
 
-    <!-- footer -->
-    <footer>
-      <div class="social" id="facebook">
-        <a href="https://www.facebook.com/Rangutan-100396818385838/?view_public_for=100396818385838" class="fa fa-facebook"></a>
-      </div>
-      <div class="social" id="youtube">
-        <a href="https://www.youtube.com/channel/UCH7I2VL1FEpHUD1R3h7QX7Q" class="fa fa-youtube"></a>
-      </div>
-    </footer>
-  </body>
-</html>
+<?php include('../inc/footer.php'); ?>

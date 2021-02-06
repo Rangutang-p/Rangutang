@@ -8,6 +8,7 @@
 }
 
 .showcase {
+<<<<<<< Updated upstream
   min-height: 500px;
   padding: 3rem;
   animation: backgroundchange 24s infinite;
@@ -21,6 +22,10 @@
   margin-top: 5px;
   text-shadow: 1px 1px 3px #444;
   grid-area: a;
+=======
+  margin-top:1px;
+  position: relative;
+>>>>>>> Stashed changes
 }
 
 
@@ -32,12 +37,104 @@
 
 .showcase p {
   text-shadow: var(--shadow);
-  margin-top: 30px;
   font-size: 3rem;
   text-transform: capitalize;
 }
 
+<<<<<<< Updated upstream
 /* boxes formatting */
+=======
+/*hiding images by default */
+.mySlides {
+  display: none;
+}
+
+/* next and prev buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top:50%;
+  width:auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: var(--light);
+  font-weight:bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* positioning next button to right */
+.next {
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* hover for prev, next */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* caption text */
+.captext {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* number text (1/3) etc */
+.numbertext {
+  color: var(--light);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* dots formatting */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  transform: scale(0.65);
+  margin: 0 2px;
+  align-items: center;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  grid-area: b;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* boxes formatting --------------------------------------------------------*/
+>>>>>>> Stashed changes
 .box {
   height: auto;
   align-items: center;
@@ -118,9 +215,14 @@
     'box-2'
   }
 
+<<<<<<< Updated upstream
   /* changing min-height of showcase */
   .showcase {
     min-height: 400px;
+=======
+  .sidebar {
+    display: none;
+>>>>>>> Stashed changes
   }
 
   /* fixing boxes */
