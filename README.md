@@ -2,6 +2,6 @@
 
 "Past work" contains practice files
 
-"Project 1" contains the html, css and js which will be incorporated into website
+"Project 1" contains the website files
 
 code should be annotated for clarity
