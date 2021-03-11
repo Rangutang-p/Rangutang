@@ -1,0 +1,245 @@
+/* slideshow formatting ------------------------------------------------------------*/
+.showcase {
+  background-color: black;
+  margin:0;
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.showcase h1 {
+  z-index: 0.8;
+  position: absolute;
+  left: 60px;
+  bottom: 200px;
+  margin: 0;
+  width: 100%;
+  color: white;
+  text-shadow: var(--shadow);
+}
+
+.showcase p {
+  z-index: 0.8;
+  position: absolute;
+  left: 60px;
+  bottom: 130px;
+  margin: 0;
+  width: 100%;
+  color: white;
+  font-size: 18pt;
+  text-shadow: var(--shadow);
+}
+
+/* course descriptions formatting -----------------------------------------------------------------*/
+/* top container formatting */
+.box-container {
+  display:grid;
+  margin-top:20px;
+  grid-gap: 10px;
+  grid-template-areas:
+  "box-1 box-2"
+}
+
+.box {
+  min-height: 400px;
+  margin-top: 100px;
+  align-items: center;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.box img {
+    width:90%;
+    margin: auto;
+}
+
+.box p {
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.box-permanent {
+  grid-area: box-1;
+  margin-left: 20px;
+}
+
+/* using this class to hide box-2 without allowing the animation to occur while hidden */
+.initial-box-2 {
+  visibility: hidden;
+  grid-area: box-2;
+}
+
+.box-2 {
+  grid-area: box-2;
+  opacity:1;
+  animation-name: boxAppear2;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+.box-4 {
+  grid-area: box-2;
+  opacity:1;
+  animation-name: boxAppear4;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
+/* This is the key to the animation of the picture below showcase */
+@keyframes boxAppear2 {
+  0% {opacity:0.25;transform:scale(0.5);}
+  25% {opacity:0.5;transform:scale(0.8);}
+  50% {opacity:0.7;transform:scale(0.9);}
+  75% {opacity:0.9;transform:scale(0.95);}
+  100% {opacity:1;transform:scale(0.99);}
+}
+
+/* This is the key to the animation of the picture below showcase */
+@keyframes boxAppear4 {
+  0% {opacity:0.25;transform:scale(0.5);}
+  25% {opacity:0.5;transform:scale(0.8);}
+  50% {opacity:0.7;transform:scale(0.9);}
+  75% {opacity:0.9;transform:scale(0.95);}
+  100% {opacity:1;transform:scale(0.99);}
+}
+
+/* video section ---------------------------------------------------------------------*/
+.int-video {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--light);
+  margin: 20px;
+}
+
+.int-video video {
+  display:block;
+  width: 50%;
+}
+
+/* testimonials formatting --------------------------------------------------------------*/
+.testimonial {
+  display: grid;
+  grid-template-areas:
+  'header header'
+  'test-1 test-2'
+}
+
+.testimonial h1 {
+  text-align: center;
+  grid-area: header;
+}
+
+.testimonial img {
+  max-width: 40%;
+}
+
+.test {
+  display: block;
+  padding: 20px;
+  margin: 0px 10px;
+  background: var(--light);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.test-1 {
+  grid-area: test-1;
+}
+
+.test-2 {
+  grid-area: test-2;
+`}`
+
+.test p {
+  text-align: center;
+}
+
+
+/* media queries organized from big->small screens -----------------------------------------------------------------------*/
+@media (max-width:1000px) {
+/* changing position of "Explore by air" */
+  .showcase h1 {
+    bottom: 200px;
+    left: 60px;
+  }
+
+  .showcase p {
+    bottom: 130px;
+    left: 60px;
+  }
+}
+
+@media (max-width:880px) {
+/* changing position of "Explore by air" */
+  .showcase h1 {
+    bottom: 250px;
+    left: 60px;
+  }
+
+  .showcase p {
+    bottom: 180px;
+    left: 60px;
+  }
+}
+
+@media (max-width:770px) {
+/* changing position of "Explore by air"  */
+   .showcase h1 {
+    bottom: 330px;
+    text-align: center;
+    left:auto;
+  }
+
+  .showcase p {
+    bottom: 270px;
+    text-align: center;
+    left:auto;
+    font-size: 14pt;
+    line-height: 1.4rem;
+  }
+}
+
+
+@media(max-width: 700px) {
+  .showcase h1 {
+   bottom: 360px;
+ }
+
+ .showcase p {
+   bottom: 300px;
+ }
+  /* changing stacking of top container */
+  .box-container {
+    grid-template-areas:
+    'box-1'
+    'box-2'
+  }
+
+  /* fixing boxes */
+  .box {
+    margin: 10px 20px;
+  }
+
+  /* changing stacking of testimonials */
+  .testimonial {
+    grid-template-areas:
+    'header'
+    'test-1'
+    'test-2'
+  }
+
+  .test {
+    margin: 10px;
+  }
+}
+
+@media(max-width: 530px) {
+  .showcase h1 {
+   bottom: 360px;
+ }
+
+ .showcase p {
+   display:none;
+ }
+}
