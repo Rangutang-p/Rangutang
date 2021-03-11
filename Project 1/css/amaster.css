@@ -1,0 +1,272 @@
+/* color scheme variables */
+:root {
+  --primary: orange;
+  --dark: #444;
+  --light: white;
+  --shadow: 0px 1px 5px rgba(86, 104, 104, 0.8);
+}
+
+/* general formatting --------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+body {
+  background: white;
+  margin: 0px 0px;
+  line-height: 1.9rem;
+  overflow-x: hidden;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border: 0;
+  border-radius: 16px;
+  color: var(--light);
+  background: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  color: var(--light);
+  background: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+video {
+  max-width: 100%;
+  align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* header formatting --------------------------------------------------------------------*/
+header {
+  padding: 8px;
+  box-shadow: var(--shadow);
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.logo-text h1 {
+  font-size: 1.1em;
+  color: #C30;
+  text-transform: uppercase;
+  font-family: Arial;
+  margin-left: 10px;
+  align-self: flex-start;
+  font-weight: normal;
+}
+
+/*  size of logo */
+#orangutan {
+  height: 45px;
+  opacity:0.9;
+}
+
+/* grouping "rangutang" and logo and translating to left 90px*/
+.logoGroup {
+  display: flex;
+  transform: translate(-90px);
+}
+/* removing text decoration */
+.logoGroup a {
+  text-decoration: none;
+}
+
+/* Navigation formatting */
+/* nav is wrapped in a header element */
+#myHeader {
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.main-nav a {
+  display: inline;
+  padding: 8px 30px;
+  float: right;
+  margin-left: 30px;
+  text-decoration: none;
+  color:#C30;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+
+.main-nav a:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* hiding collapsible icon for large screens */
+.main-nav .icon {
+  display: none;
+}
+
+/* Sticky header when you scroll */
+.sticky {
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+/* adding padding to prevent the sudden quick movement  */
+.sticky + .content {
+  padding-top: 70px;
+}
+
+/* Miscellaneous formatting ------------------------------------------------------------- */
+/* popup formatting */
+.popup {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+/* formatting icons */
+.fa-bars {
+  padding: 0;
+}
+
+/* footer -----------------------------------------------------------------------------*/
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+  background: #444;
+  text-align: center;
+  }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  color: white;
+  background: #3B5998;
+}
+
+.fa-youtube {
+  color: white;
+  background: #FF0000;
+}
+
+#facebook {
+  grid-column: 2/3;
+  margin-left: auto;
+}
+
+#youtube {
+  grid-column: 3/4;
+  margin-right: auto;
+}
+
+/* media queries (listed from max-width: highest to lowest) --------------------------------------------------------------------*/
+/* reducing translate() from logoGroup as screen shrinks; in order to prevent group from translating off screen */
+@media (max-width:1300px) {
+  .logoGroup {
+    transform: translate(-70px);
+  }
+}
+
+/* reducing translate() from logoGroup*/
+@media (max-width:1100px) {
+  .logoGroup {
+    transform: translate(-40px);
+  }
+}
+
+/* removing translate() from logoGroup */
+@media (max-width:900px) {
+  .logoGroup {
+    transform: translate(0);
+  }
+}
+
+/* reformatting header for smaller screen*/
+@media(max-width: 760px) {
+/* formatting header  */
+  .main-nav a {
+    font-size: 1em;
+    padding: 6px 25px;
+    margin-left: 22px;
+  }
+
+  .logo-text h1 {
+    font-size: 1em;
+  }
+}
+
+/* header reformatting at slightly smaller screen */
+@media (max-width: 690px) {
+  .main-nav a {
+    font-size: 0.84em;
+    padding: 4px 25px;
+    margin-left: 10px;
+  }
+}
+
+/* phone-sized screen media queries - - - - - - - - - - - - - - - - - - - -  */
+@media(max-width: 600px) {
+/* collapsing main nav sections for small screens */
+  .main-nav a:not(:first-child) {
+      display: none;
+      font-size: 10pt;
+  }
+
+/* displaying the bars icon signifying a collapsable menu */
+  .main-nav .icon {
+    display: block;
+    height: 30px;
+    overflow:hidden;
+    font-size: 10pt;
+  }
+
+/*  */
+  .main-nav.responsive {
+    position: relative;
+  }
+
+/* mechanism to allow expansion of menu using JS */
+  .main-nav.responsive a {
+    display: block;
+    text-align: left;
+    margin: 0;
+  }
+
+/* position of icon  (NOT COMPATIBLE WITH FLEX) */
+  .main-nav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+/* moving logoGroup to left slightly */
+  .logoGroup {
+    transform: translate(-40px);
+  }
+}
+
+/* animations -----------------------------------------------------------------------*/
+/* reserved */
+@keyframes menuicon {
+
+}

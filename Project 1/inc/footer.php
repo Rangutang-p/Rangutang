@@ -1,3 +1,7 @@
+
+<!-- end of content class -->
+</div>
+
 <!-- footer -->
 <footer>
   <div class="social" id="facebook">

@@ -1,0 +1,11 @@
+
+FOR HEADER
+ - drop down for smaller screens is broken due to incompatibility with flexbox
+ - drop down for each heading i.e. "about" "services"
+
+FOR INDEX
+  - may need to shift the text within showcase (higher)
+  - split boxes with course descriptions into two stacked sections each with a paragraph description and a photo and a graphic (.svg)
+  - change course descriptions; minimally need graphics
+  - may eliminate video; definitely needs reformatting
+  -

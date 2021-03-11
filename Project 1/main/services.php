@@ -8,7 +8,6 @@
 
 </head>
 <body>
-<?php include '../inc/popup.php' ?>
 <?php include '../inc/header.php' ?>
 
     <!-- description of services -->

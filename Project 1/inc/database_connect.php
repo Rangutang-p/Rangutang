@@ -1,5 +1,8 @@
 <?php
-  $conn = mysqli_connect('localhost','root','123456','vlog');
-
-  
+// Create connection
+  $conn = mysqli_connect('localhost','root','&Greenwall56','vlog');
+  // Check connection
+  if(mysqli_connect_errno()){
+      echo 'Failed to connect to MySQL'. mysqli_connect_errno();
+  }
  ?>

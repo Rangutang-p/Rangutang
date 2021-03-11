@@ -1,3 +1,4 @@
+<?php require('../inc/database_connect.php') ?>
 <?php include('../inc/top.php'); ?>
 
   <title>Rangutang</title>
@@ -7,7 +8,6 @@
 
 </head>
 <body>
-<?php include '../inc/popup.php' ?>
 <?php include '../inc/header.php' ?>
 
     <!-- Explanation of page -->
